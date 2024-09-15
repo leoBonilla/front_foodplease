@@ -5,6 +5,7 @@ import Login from './components/Login';
 import Orders from './components/Orders';
 import CreateOrder from './components/CreateOrder';
 import Navbar from './components/NavBar';
+import OrderDetail from './components/OrderDetail';
 import { Box } from '@mui/material';
 
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
                     <Route path="/register" element={!isLoggedIn ? <Register /> : <Navigate to="/orders" />} />
                     <Route path="/orders" element={isLoggedIn ? <Orders /> : <Navigate to="/login" />} />
                     <Route path="/create-order" element={isLoggedIn ? <CreateOrder /> : <Navigate to="/login" />} />
+                    <Route path="/order-detail/:orderId" element={isLoggedIn ? <OrderDetail /> : <Navigate to="/login" />} />
                 </Routes>
             </Box>
         </Router>

@@ -1,5 +1,9 @@
 {
   "appId": "com.foodplease.com",
   "appName": "foodplease",
-  "webDir": "build"
+  "webDir": "build",
+  "bundledWebRuntim": false,
+  "android": {
+    "allowMixedContent": true
+  }
 }

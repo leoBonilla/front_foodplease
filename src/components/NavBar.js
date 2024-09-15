@@ -7,7 +7,7 @@ const Navbar = ({ isLoggedIn, handleLogout }) => {
         <AppBar position="static">
             <Toolbar>
                 <Typography variant="h6" sx={{ flexGrow: 1 }}>
-                    OrdersApp
+                    Food Please
                 </Typography>
                 {!isLoggedIn ? (
                     <>
@@ -15,16 +15,16 @@ const Navbar = ({ isLoggedIn, handleLogout }) => {
                             Login
                         </Button>
                         <Button color="inherit" component={Link} to="/register">
-                            Register
+                            Registro
                         </Button>
                     </>
                 ) : (
                     <>
                         <Button color="inherit" component={Link} to="/orders">
-                            Orders
+                            Mis pedidos
                         </Button>
                         <Button color="inherit" component={Link} to="/create-order">
-                            Create Order
+                            Pedir
                         </Button>
                         <Button color="inherit" onClick={handleLogout}>
                             Logout
